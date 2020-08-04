@@ -5,6 +5,7 @@ module.exports = {
 	name: 'say',
 	description: 'say',
 	execute(message) {
+		const member = message.author;
 		const msg = message.content.substr(5);
 
 		if (member.hasPermission('MENTION_EVERYONE')) 
