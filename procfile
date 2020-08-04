@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+worker: node bot.js
+=======
+worker: node index.js
+>>>>>>> 1f0c1f70c5a69bfc113b531c21f942975e470fa4
