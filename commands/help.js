@@ -14,26 +14,38 @@ module.exports = {
 					.setDescription('e!help')
 					.setThumbnail('https://imgur.com/O2cVNvg.png')
 					.addField('Prefix', 'Prefix: e!', true)
-					.addField('User Commands', 'Command everyone can execute', true)
-					.addField('math', 'e!math 1 1', true)
-					.addField('randomnum', 'e!randomnum [Number]', true)
-					.addField('say', 'e!say [Text]', true)
-					.addField('ping', 'e!ping', true)
-					.addField('server', 'e!server', true)
-					.addField('spamdm', 'e!spamdm', true)
-					.addField('poll', 'e!poll [Text]', true)
-					.addField('Music Commands', 'In a voice channel', true)
-					.addField('play', 'e!play [Youtube Link]', true)
-					.addField('leave', 'e!leave', true)
-					.addField('Moderation', 'Moderation purposes', true)
-					.addField('kick', 'e!kick [Mention]', true)
-					.addField('ban', 'e!ban [Mention]', true)
-					.addField('prune', 'e!prune [1-99]', true)
-					.addField('roleadd', 'e!roleadd [Mention]', true)
-					.addField('rolecreate', 'e!rolecreate [Name]', true)
-					.addField('Forbidden Commands', 'I would prefer if you wouldn\'t use them', true)
-					.addField('uwuify', 'e!uwuify [Text]', true)
-					.addField('uwuface', 'e!uwuface', true)
+					.addFields(
+						{ name: 'User Commands', value: 'Commands everyone can use' },
+						{ name: '\u200B', value: '\u200B' },
+						{ name: 'math', value: 'e!math 1 1', inline: true },
+						{ name: 'randomnum', value: 'e!randomnum [Number]', inline: true },
+						{ name: 'say', value: 'e!say [Text]', inline: true },
+						{ name: 'ping', value: 'e!ping', inline: true },
+						{ name: 'server', value: 'e!server', inline: true },
+						{ name: 'spamdm', value: 'e!spamdm', inline: true },
+						{ name: 'poll', value: 'e!poll [Text]', inline: true },
+					)
+					.addFields(
+						{ name: 'Music Commands', value: 'Used in a voice channel' },
+						{ name: '\u200B', value: '\u200B' },
+						{ name: 'play', value: 'e!play [YouTube Link]', inline: true },
+						{ name: 'leave', value: 'e!leave', inline: true },
+					)
+					.addFields(
+						{ name: 'Moderation', value: 'Commands only accessible to staff' },
+						{ name: '\u200B', value: '\u200B' },
+						{ name: 'kick', value: 'e!kick [Mention] [Reason]', inline: true },
+						{ name: 'ban', value: 'e!ban [Mention] [Reason]', inline: true },
+						{ name: 'prune', value: 'e!prune [1-99]', inline: true },
+						{ name: 'roleadd', value: 'e!roleadd [Mention] [Role Name]', inline: true },
+						{ name: 'rolecreate', value: 'e!rolecreate [Name]', inline: true },
+					)
+					.addFields(
+						{ name: 'Forbidden Commands', value: 'I would prefer if you would not use them' },
+						{ name: '\u200B', value: '\u200B' },
+						{ name: 'uwuify', value: 'e!uwuify [Text]', inline: true },
+						{ name: 'uwuface', value: 'e!uwuface', inline: true },
+					)
 					.setTimestamp()
 				message.author.send(embed);
 			if (!message.guild){
