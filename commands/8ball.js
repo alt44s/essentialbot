@@ -8,6 +8,6 @@ module.exports = {
 			return _ball[Math.floor(Math.random() * faces.length)];
         }
         
-        message.channel.send(ball);
+        message.channel.send(ball());
 	}
 }
