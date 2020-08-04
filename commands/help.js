@@ -43,6 +43,7 @@ module.exports = {
 			}
 			} catch (err) {
 				await message.channel.send('Couldn\'t send you a message. Are your dms open?')
+				console.log(err);
 			}
 		}
 	}
