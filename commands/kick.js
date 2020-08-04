@@ -3,14 +3,6 @@ const client = new Discord.Client();
 
 const { Permissions } = require('discord.js');
 
-const flags = [
-	'MANAGE_CHANNELS',
-	'EMBED_LINKS',
-	'ATTACH_FILES',
-	'READ_MESSAGE_HISTORY',
-	'MANAGE_ROLES',
-];
-
 module.exports = {
 	name: 'kick',
 	description: 'kick a user from the server.',

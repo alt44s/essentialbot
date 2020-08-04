@@ -5,11 +5,21 @@ module.exports = {
 	name: 'say',
 	description: 'say',
 	execute(message) {
-		message.channel.startTyping();
-		message.delete();
-		setTimeout(function(){ 
-		message.channel.send(message.content.substr(5));
-		message.channel.stopTyping();
-		}, 500);
+		const msg = message.content.substr(5);
+
+		if (member.hasPermission('MENTION_EVERYONE')) 
+        {
+			message.channel.startTyping();
+			message.delete();
+			setTimeout(function(){ 
+			message.channel.send(msg);
+			message.channel.stopTyping();
+			}, 500);
+		} else if (!member.hasPermission('MENTION_EVERYONE')) {
+			if (message.content.includes('@everyone' || '@here')){
+				message.delete()
+					.then(message.channel.send('Why would you want to do that?'))
+			}
+		}
 	},
 };
