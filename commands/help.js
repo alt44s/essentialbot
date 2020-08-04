@@ -16,7 +16,6 @@ module.exports = {
 					.addField('Prefix', 'Prefix: e!', true)
 					.addFields(
 						{ name: 'User Commands', value: 'Commands everyone can use' },
-						{ name: '\u200B', value: '\u200B' },
 						{ name: 'math', value: 'e!math 1 1', inline: true },
 						{ name: 'randomnum', value: 'e!randomnum [Number]', inline: true },
 						{ name: 'say', value: 'e!say [Text]', inline: true },
@@ -27,13 +26,11 @@ module.exports = {
 					)
 					.addFields(
 						{ name: 'Music Commands', value: 'Used in a voice channel' },
-						{ name: '\u200B', value: '\u200B' },
 						{ name: 'play', value: 'e!play [YouTube Link]', inline: true },
 						{ name: 'leave', value: 'e!leave', inline: true },
 					)
 					.addFields(
 						{ name: 'Moderation', value: 'Commands only accessible to staff' },
-						{ name: '\u200B', value: '\u200B' },
 						{ name: 'kick', value: 'e!kick [Mention] [Reason]', inline: true },
 						{ name: 'ban', value: 'e!ban [Mention] [Reason]', inline: true },
 						{ name: 'prune', value: 'e!prune [1-99]', inline: true },
@@ -42,7 +39,6 @@ module.exports = {
 					)
 					.addFields(
 						{ name: 'Forbidden Commands', value: 'I would prefer if you would not use them' },
-						{ name: '\u200B', value: '\u200B' },
 						{ name: 'uwuify', value: 'e!uwuify [Text]', inline: true },
 						{ name: 'uwuface', value: 'e!uwuface', inline: true },
 					)
