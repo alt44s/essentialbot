@@ -23,6 +23,7 @@ module.exports = {
 						{ name: 'server', value: 'e!server', inline: true },
 						{ name: 'spamdm', value: 'e!spamdm', inline: true },
 						{ name: 'poll', value: 'e!poll [Text]', inline: true },
+						{ name: '8ball', value: 'e!8ball [Optional Text]', inline: true },
 					)
 					.addFields(
 						{ name: 'Music Commands', value: 'Used in a voice channel' },
