@@ -25,7 +25,7 @@ module.exports = {
 
 		if (member.hasPermission('MANAGE_ROLES') || message.author.id === '472744991241011201') {
 		try {
-            guild.roles.create({ data: { name: args[0], permissions: ['SEND_MESSAGES', 'VIEW_CHANNEL'], color: 'RANDOM' } });
+            guild.roles.create({ data: { name: message.content.substr(2), permissions: ['SEND_MESSAGES', 'VIEW_CHANNEL'], color: 'RANDOM' } });
             message.channel.send('Successfully created the role: ' + args[0]);
 		} catch (err) {
 			console.error(err);

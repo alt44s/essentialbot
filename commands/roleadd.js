@@ -28,7 +28,7 @@ module.exports = {
 		const role = guild.roles.cache.find(role => role.name === args[1]);
 		const member = message.mentions.members.first();
 		member.roles.add(role);
-		message.channel.send(`Successfully added the role to \`${member}`);
+		message.channel.send(`Successfully added ${role} to ${member}`);
 		} catch (err) {
 			console.error(err);
 			message.channel.send('I was unable to add the role to the member');
