@@ -5,7 +5,7 @@ module.exports = {
 	description: '8ball',
 	execute(message, args) {
 		function ball() {
-			return _ball[Math.floor(Math.random() * faces.length)];
+			return _ball[Math.floor(Math.random() * _ball.length)];
         }
         
         message.channel.send(ball());
