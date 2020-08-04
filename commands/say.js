@@ -20,8 +20,7 @@ module.exports = {
 			}, 500);
 		} else if (!member.hasPermission('MENTION_EVERYONE')) {
 			if (message.content.includes('@everyone' || '@here')){
-				message.delete()
-					.then(message.channel.send('Why would you want to do that?'))
+				message.channel.send('Why would you want to do that?');
 			}
 		}
 	},
