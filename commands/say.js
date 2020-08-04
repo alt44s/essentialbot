@@ -21,6 +21,13 @@ module.exports = {
 		} else if (!member.hasPermission('MENTION_EVERYONE')) {
 			if (message.content.includes('@everyone' || '@here')){
 				message.channel.send('Why would you want to do that?');
+			} else {
+				message.channel.startTyping();
+				message.delete();
+				setTimeout(function(){ 
+				message.channel.send(msg);
+				message.channel.stopTyping();
+			}, 500);
 			}
 		}
 	},
