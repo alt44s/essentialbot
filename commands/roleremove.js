@@ -15,12 +15,14 @@ module.exports = {
 		const guild = message.guild;
 		const member = message.member;
 		
+		whatever();
+		async function whatever() {
 		if (member.hasPermission('MANAGE_ROLES') || message.author.id === '472744991241011201') {
 		try {
 		const role = guild.roles.cache.find(role => role.name === args[1]);
 		const member = message.mentions.members.first();
 		member.roles.remove(role);
-		message.channel.send(`Successfully removed ${role} of ${member}`);
+		message.channel.send(`Successfully removed ${role} off ${member}`);
 		} catch (err) {
 			console.error(err);
 			message.channel.send(`I was unable to remove ${role} off ${member}`);
@@ -28,6 +30,7 @@ module.exports = {
 		} else if (!member.hasPermission('MANAGE_ROLES')) {
 			return message.channel.send('You do not have the required permissions to execute that command');
 		}
+	}
 		
 	}
 }

@@ -15,6 +15,9 @@ module.exports = {
 		const guild = message.guild;
 		const member = message.member;
 		
+		
+		whatever();
+		async function whatever() {
 		if (member.hasPermission('MANAGE_ROLES') || message.author.id === '472744991241011201') {
 		try {
 		const role = guild.roles.cache.find(role => role.name === args[1]);
@@ -28,6 +31,7 @@ module.exports = {
 		} else if (!member.hasPermission('MANAGE_ROLES')) {
 			return message.channel.send('You do not have the required permissions to execute that command');
 		}
+	}
 		
 	}
 }
