@@ -36,6 +36,7 @@ module.exports = {
 						{ name: 'ban', value: 'e!ban [Mention] [Reason]', inline: true },
 						{ name: 'prune', value: 'e!prune [1-99]', inline: true },
 						{ name: 'roleadd', value: 'e!roleadd [Mention] [Role Name]', inline: true },
+						{ name: 'roleremove', value: 'e!roleremove [Mention] [Role Name]', inline: true },
 						{ name: 'rolecreate', value: 'e!rolecreate [Name]', inline: true },
 					)
 					.addFields(
