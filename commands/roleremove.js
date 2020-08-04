@@ -4,8 +4,8 @@ const client = new Discord.Client();
 const { Permissions } = require('discord.js');
 
 module.exports = {
-	name: 'roleadd',
-	description: 'add a role',
+	name: 'roleremove',
+	description: 'remove a role',
 	execute(message, args) {
 		if (!message.guild) {
             message.channel.send('You can\'t execute that command here.')
@@ -19,11 +19,11 @@ module.exports = {
 		try {
 		const role = guild.roles.cache.find(role => role.name === args[1]);
 		const member = message.mentions.members.first();
-		member.roles.add(role);
-		message.channel.send(`Successfully added ${role} to ${member}`);
+		member.roles.remove(role);
+		message.channel.send(`Successfully removed ${role} of ${member}`);
 		} catch (err) {
 			console.error(err);
-			message.channel.send('I was unable to add the role to the member');
+			message.channel.send(`I was unable to remove ${role} off ${member}`);
 		}
 		} else if (!member.hasPermission('MANAGE_ROLES')) {
 			return message.channel.send('You do not have the required permissions to execute that command');
