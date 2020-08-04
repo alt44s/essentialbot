@@ -12,7 +12,7 @@ module.exports = {
 					.setTitle('Help!')
 					.setAuthor('EssentialBot')
 					.setDescription('e!help')
-					.setThumbnail('https://imgur.com/O2cVNvg')
+					.setThumbnail('https://imgur.com/O2cVNvg.png')
 					.addField('', 'Prefix: e!', true)
 					.addField('User Commands', '', true)
 					.addField('math', 'e!math 1 1', true)
