@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+const { Permissions } = require('discord.js');
+
 module.exports = {
 	name: 'say',
 	description: 'say',
