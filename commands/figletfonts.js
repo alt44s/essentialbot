@@ -1,4 +1,5 @@
 var figlet = require('figlet');
+const Discord = require('discord.js');
 
 module.exports = {
 	name: 'figletfonts',
@@ -10,7 +11,14 @@ module.exports = {
                 console.dir(err);
                 return;
             }
-            message.channel.send(fonts);
+            const embed = new Discord.MessageEmbed()
+                .setColor('RANDOM')
+                .setTitle('Fonts')
+                .setAuthor('EssentialBot')
+                .setDescription(fonts)
+                .setTimestamp();
+            channel.send(embed);
+            
         });        
 	}
 }
