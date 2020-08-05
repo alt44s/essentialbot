@@ -9,7 +9,7 @@ module.exports = {
                 .setColor('RANDOM')
                 .setTitle('Fonts')
                 .setAuthor('EssentialBot')
-                .setDescription('http://www.figlet.org/fontdb.cgi')
+                .setDescription('http://www.figlet.org/fontdb.cgi (Uppercase)')
                 .setTimestamp();
             message.channel.send(embed);
          
