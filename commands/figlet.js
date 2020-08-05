@@ -6,10 +6,17 @@ module.exports = {
 	execute(message, args) {
         const input = message.content.substr(8);
 
-		figlet(input, function(err, data) {
+
+		figlet.text(input, {
+            font: 'Ghost',
+            horizontalLayout: 'default',
+            verticalLayout: 'default',
+            width: 80,
+            whitespaceBreak: true
+        }, function(err, data) {
             if (err) {
-                message.channel.send('Something went wrong');
-                console.log(err);
+                console.log('Something went wrong...');
+                console.dir(err);
                 return;
             }
 
