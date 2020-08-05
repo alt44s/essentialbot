@@ -10,7 +10,7 @@ module.exports = {
                 console.dir(err);
                 return;
             }
-            console.dir(fonts);
+            message.channel.send(fonts);
         });        
 	}
 }
