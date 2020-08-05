@@ -4,7 +4,7 @@ module.exports = {
 	name: 'figlet',
 	description: 'cool text',
 	execute(message, args) {
-        const input = message.content.substr(args[0].substr(8));
+        const input = args;
         const font = args[0];
 
 
