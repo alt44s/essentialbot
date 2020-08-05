@@ -17,7 +17,7 @@ module.exports = {
                 .setAuthor('EssentialBot')
                 .setDescription(fonts)
                 .setTimestamp();
-            channel.send(embed);
+            message.channel.send(embed);
             
         });        
 	}
