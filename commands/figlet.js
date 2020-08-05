@@ -13,7 +13,7 @@ module.exports = {
                 return;
             }
 
-            message.channel.send(data);
+            message.channel.send(`\`\`\`` + data + `\`\`\``);
 
         });
 	}
