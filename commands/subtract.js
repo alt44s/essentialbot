@@ -5,6 +5,9 @@ module.exports = {
 		const amount1 = parseInt(args[0]);
 		const amount2 = parseInt(args[1]);
 
+		if (NaN){
+			message.channel.send('Invalid number');
+		} else {
 		thing();
 		function thing() {
 		try {
@@ -13,5 +16,6 @@ module.exports = {
 			message.channel.send('Something went wrong')
 		}
 		}
+	}
 	},
 };
