@@ -16,7 +16,10 @@ module.exports = {
 					.addField('Prefix', 'Prefix: e!', true)
 					.addFields(
 						{ name: 'User Commands', value: 'Commands everyone can use' },
-						{ name: 'math', value: 'e!math 1 1', inline: true },
+						{ name: 'add', value: 'e!add 1 1', inline: true },
+						{ name: 'subtract', value: 'e!subtract 2 1', inline: true },
+						{ name: 'multiply', value: 'e!multiply 5 5', inline: true },
+						{ name: 'divide', value: 'e!divide 6 2', inline: true },
 						{ name: 'randomnum', value: 'e!randomnum [Number]', inline: true },
 						{ name: 'say', value: 'e!say [Text]', inline: true },
 						{ name: 'ping', value: 'e!ping', inline: true },
