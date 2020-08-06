@@ -1,13 +1,17 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
-
 module.exports = {
-	name: 'math',
-	description: 'basic math',
+	name: 'add',
+	description: '+',
 	execute(message, args) {
 		const amount1 = parseInt(args[0]);
 		const amount2 = parseInt(args[1]);
 
+		thing();
+		function thing() {
+		try {
 		message.channel.send(Number(amount1) + amount2);
+		} catch (err) {
+			message.channel.send('Something went wrong')
+		}
+		}
 	},
 };
