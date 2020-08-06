@@ -8,7 +8,7 @@ module.exports = {
 		thing();
 		function thing() {
 		try {
-		message.channel.send(Number(amount1) - amount2);
+		message.channel.send(Number(amount1) / amount2);
 		if (NaN){
 			message.channel.send('Invalid number');
 		}
