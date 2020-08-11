@@ -13,19 +13,6 @@ module.exports = {
         const input = (p.replace(regex, ''));
         const font = args[0];
 
-        if (!message.content.includes(fonts)) {
-            figlet(input, function(err, _data) {
-                if (err) {
-                   message.channel.send('Something went wrong...');
-                   console.log(err);
-                    return;
-                }
-                message.channel.send(`\`\`\`` + _data + `\`\`\``);
-                return;
-            });
-        }
-
-        if (message.content.includes(fonts)) {
 		figlet.text(input, {
             font: font,
             horizontalLayout: 'default',
@@ -40,6 +27,5 @@ module.exports = {
             }
             message.channel.send(`\`\`\`` + data + `\`\`\``);
         });
-    }
 	}
 }
