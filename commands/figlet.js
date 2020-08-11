@@ -4,8 +4,7 @@ module.exports = {
 	name: 'figlet',
 	description: 'cool text',
 	execute(message, args) {
-        const _input = [args[1], args[2], args[3], args[4]];
-        const input = parseFloat(`${_input}`.replace(/,/g, ''));
+        const input = parseFloat(`${[args[1], args[2], args[3], args[4]]}`.replace(/,/g, ''));
         const font = args[0];
 
 
