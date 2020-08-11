@@ -4,11 +4,13 @@ module.exports = {
 	name: 'figlet',
 	description: 'cool text',
 	execute(message, args) {
-        const p = `${args[1]}, ${args[2]}, ${args[3]}, ${args[4]}`;
-        const regex = /,/g;
-        const _regex = /undefined/g;
-        const input = (p.replace(regex, '')) +
-                    (p.replace(_regex, ''));
+        const p = `${args[1]} ${args[2]} ${args[3]} ${args[4]}`;
+        if (!args) {
+            message.channel.send('Provide arguments.')
+            return;
+        }
+        const regex = /undefined/g;
+        const input = (p.replace(regex, ''));
         const font = args[0];
 
 
