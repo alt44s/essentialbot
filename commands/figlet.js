@@ -25,7 +25,7 @@ module.exports = {
             whitespaceBreak: true
         }, function(err, data) {
             if (err) {
-                message.channel.send('Something went wrong. Did you enter the font right?');
+                message.channel.send('Something went wrong. The reasons could be:\nYou didn\'t enter the font name right\nYou didn\'t provide a font');
                 console.log(err);
                 return;
             }
