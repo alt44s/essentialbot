@@ -13,6 +13,10 @@ module.exports = {
         if (!args[1]) {
             return message.channel.send(`Not enough arguments`);
         }
+
+        if (args[6]) {
+            return message.channel.send(`Too much arguments`);
+        }
         const regex = /undefined/g;
         const input = (p.replace(regex, ''));
         const font = args[0];
