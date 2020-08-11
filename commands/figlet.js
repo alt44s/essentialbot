@@ -1,4 +1,5 @@
 var figlet = require('figlet');
+const { fonts } = require('figlet');
 
 module.exports = {
 	name: 'figlet',
@@ -12,11 +13,13 @@ module.exports = {
         const input = (p.replace(regex, ''));
         const font = args[0];
 
-        if (!args[0].length) {
+        figlet.fonts(fonts);
+
+        if (!message.content.includes(fonts)) {
             figlet(input, function(err, data) {
                 if (err) {
-                    message.channel.send('Something went wrong...');
-                    console.log(err);
+                   message.channel.send('Something went wrong...');
+                   console.log(err);
                     return;
                 }
                 message.channel.send(`\`\`\`` + data + `\`\`\``);
@@ -24,6 +27,7 @@ module.exports = {
             });
         }
 
+        if (message.content.includes(fonts)) {
 		figlet.text(input, {
             font: font,
             horizontalLayout: 'default',
@@ -38,5 +42,6 @@ module.exports = {
             }
             message.channel.send(`\`\`\`` + data + `\`\`\``);
         });
+    }
 	}
 }
