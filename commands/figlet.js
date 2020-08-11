@@ -13,7 +13,7 @@ module.exports = {
         const input = (p.replace(regex, ''));
         const font = args[0];
 
-        figlet.fonts(fonts);
+        const fonts = figlet.fonts;
 
         if (!message.content.includes(fonts)) {
             figlet(input, function(err, data) {
