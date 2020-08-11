@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const { MessageAttachment } = require('discord.js');
 var ai = require('ascii-images');
 module.exports = {
 	name: 'aimage',
