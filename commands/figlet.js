@@ -14,13 +14,13 @@ module.exports = {
         const font = args[0];
 
         if (!message.content.includes(fonts)) {
-            figlet(input, function(err, data) {
+            figlet(input, function(err, _data) {
                 if (err) {
                    message.channel.send('Something went wrong...');
                    console.log(err);
                     return;
                 }
-                message.channel.send(`\`\`\`` + data + `\`\`\``);
+                message.channel.send(`\`\`\`` + _data + `\`\`\``);
                 return;
             });
         }
