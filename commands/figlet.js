@@ -9,6 +9,10 @@ module.exports = {
         if (!args.length) {
             return message.channel.send(`You didn't provide any arguments`);
         }
+
+        if (!args[1]) {
+            return message.channel.send(`Not enough arguments`);
+        }
         const regex = /undefined/g;
         const input = (p.replace(regex, ''));
         const font = args[0];
