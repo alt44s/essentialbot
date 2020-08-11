@@ -5,7 +5,7 @@ module.exports = {
 	description: 'cool text',
 	execute(message, args) {
         const _input = [args[1], args[2], args[3], args[4]];
-        const input = parseFloat(_input.replace(/,/g, ''));
+        const input = parseFloat(`${_input}`.replace(/,/g, ''));
         const font = args[0];
 
 
