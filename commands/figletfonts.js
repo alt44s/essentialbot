@@ -9,7 +9,7 @@ module.exports = {
                 .setColor('RANDOM')
                 .setTitle('Fonts')
                 .setAuthor('EssentialBot')
-                .setDescription('http://www.figlet.org/fontdb.cgi (Uppercase)')
+                .setDescription('https://hastebin.com/urivuzunum.md')
                 .setTimestamp();
             message.channel.send(embed);
          
