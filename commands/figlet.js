@@ -5,7 +5,7 @@ module.exports = {
 	description: 'cool text',
 	execute(message, args) {
         const p = `${args[1]}, ${args[2]}, ${args[3]}, ${args[4]}`;
-        const regex = /,/gi;
+        const regex = /,/g;
         const input = parseFloat(p.replace(regex, ''));
         const font = args[0];
 
