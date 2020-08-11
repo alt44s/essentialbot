@@ -5,7 +5,7 @@ module.exports = {
 	name: 'figlet',
 	description: 'cool text',
 	execute(message, args) {
-        const p = `${args[1]} ${args[2]} ${args[3]} ${args[4]} ${args[5]}`;
+        const p = `${args[1]} ${args[2]} ${args[3]} ${args[4]} ${args[5]} ${args[6]} ${args[7]} ${args[8]} ${args[9]} ${args[10]}`;
         if (!args.length) {
             return message.channel.send(`You didn't provide any arguments`);
         }
@@ -14,7 +14,7 @@ module.exports = {
             return message.channel.send(`Not enough arguments`);
         }
 
-        if (args[6]) {
+        if (args[11]) {
             return message.channel.send(`Too much arguments`);
         }
         const regex = /undefined/g;
