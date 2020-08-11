@@ -6,7 +6,9 @@ module.exports = {
 	execute(message, args) {
         const p = `${args[1]}, ${args[2]}, ${args[3]}, ${args[4]}`;
         const regex = /,/g;
-        const input = (p.replace(regex, ''));
+        const _regex = /undefined/g;
+        const input = (p.replace(regex, '')) +
+                    (p.replace(_regex, ''));
         const font = args[0];
 
 
@@ -19,8 +21,8 @@ module.exports = {
             whitespaceBreak: true
         }, function(err, data) {
             if (err) {
-                console.log('Something went wrong...');
-                console.dir(err);
+                message.channel.send('Something went wrong...');
+                console.log(err);
                 return;
             }
 
