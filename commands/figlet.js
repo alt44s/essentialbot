@@ -4,7 +4,7 @@ module.exports = {
 	name: 'figlet',
 	description: 'cool text',
 	execute(message, args) {
-        const p = `${args[1]} ${args[2]} ${args[3]} ${args[4]}`;
+        const p = `${args[1]} ${args[2]} ${args[3]} ${args[4]} ${args[5]}`;
         if (!args) {
             message.channel.send('Provide arguments.')
             return;
@@ -13,7 +13,17 @@ module.exports = {
         const input = (p.replace(regex, ''));
         const font = args[0];
 
-
+        if (!args[0]) {
+            figlet(input, function(err, data) {
+                if (err) {
+                    message.channel.send('Something went wrong...');
+                    console.log(err);
+                    return;
+                }
+                message.channel.send(`\`\`\`` + data + `\`\`\``);
+                return;
+            });
+        }
 
 		figlet.text(input, {
             font: font,
@@ -27,9 +37,7 @@ module.exports = {
                 console.log(err);
                 return;
             }
-
             message.channel.send(`\`\`\`` + data + `\`\`\``);
-
         });
 	}
 }
