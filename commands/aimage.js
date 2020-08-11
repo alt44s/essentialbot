@@ -7,8 +7,8 @@ module.exports = {
 	name: 'aimage',
 	description: 'ascii to image',
 	execute(message, args) {
-		ai(_image, function(result){
-            message.channel.send({files: [image]});
+		ai(image, function(result){
+            message.channel.send(`\`\`\`${result}\`\`\``);
           });          
 	}
 }
