@@ -5,9 +5,9 @@ module.exports = {
 	name: 'aimage',
 	description: 'ascii to image',
 	execute(message, args) {
-        const image = message.attachments;
+        const attachment = new MessageAttachment(attachments);
 
-        message.channel.send(image);
+        message.channel.send(attachment);
 		//ai(image, function(result){
           //  message.channel.send(`\`\`\`${result}\`\`\``);
           //});          
