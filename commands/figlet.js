@@ -13,7 +13,7 @@ module.exports = {
         const input = (p.replace(regex, ''));
         const font = args[0];
 
-        if (!args[0]) {
+        if (!font) {
             figlet(input, function(err, data) {
                 if (err) {
                     message.channel.send('Something went wrong...');
