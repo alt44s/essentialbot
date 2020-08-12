@@ -39,7 +39,7 @@ module.exports = {
             message.channel.send(`\`\`\`` + data + `\`\`\``);
         });
         } catch (err) {
-            message.channel.send("Couldn't send that message. May have been because of the character limit. Try lowering the amount of characters you type in.");
+            await message.channel.send("Couldn't send that message. May have been because of the character limit. Try lowering the amount of characters you type in.");
         }
 	}
 }
