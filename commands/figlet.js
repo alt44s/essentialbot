@@ -21,6 +21,9 @@ module.exports = {
         const input = (p.replace(regex, ''));
         const font = args[0];
 
+        whatever();
+		async function whatever() {
+            try {
 		figlet.text(input, {
             font: font,
             horizontalLayout: 'default',
@@ -35,5 +38,9 @@ module.exports = {
             }
             message.channel.send(`\`\`\`` + data + `\`\`\``);
         });
+        } catch (err) {
+            message.channel.send("Couldn't send that message. May have been because of the character limit. Try lowering the amount of characters you type in.");
+        }
 	}
+}
 }
