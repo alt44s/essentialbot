@@ -36,7 +36,7 @@ module.exports = {
 		async function whatever() {
 			try {
             await message.channel.send(`\`\`\`` + data + `\`\`\``)
-            message.delete;
+            message.delete();
         } catch (err) {
             await message.channel.send("Couldn't send that message. May have been because of the character limit. Try lowering the amount of characters you type in.")
         }
