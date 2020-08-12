@@ -6,9 +6,6 @@ module.exports = {
 	description: 'cool text',
 	execute(message, args) {
         const p = `${args[1]} ${args[2]} ${args[3]} ${args[4]} ${args[5]} ${args[6]} ${args[7]} ${args[8]} ${args[9]} ${args[10]}`;
-        whatever();
-		async function whatever() {
-			try {
         if (!args.length) {
             return message.channel.send(`You didn't provide any arguments`);
         }
@@ -35,11 +32,14 @@ module.exports = {
                 console.log(err);
                 return;
             }
+            whatever();
+		async function whatever() {
+			try {
             message.channel.send(`\`\`\`` + data + `\`\`\``);
-        });
         } catch (err) {
             await message.channel.send("Couldn't send that message. May have been because of the character limit. Try lowering the amount of characters you type in.");
         }
+    }
+        });
 	}
-}
 }
