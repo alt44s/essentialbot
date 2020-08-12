@@ -2,6 +2,7 @@ module.exports = {
 	name: 'ping',
 	description: 'fuck you',
 	execute(message, args) {
-		message.channel.send('Pong.');
+		var ping = Date.now() - message.createdTimestamp + " ms";
+    message.channel.sendMessage("`" + `${Date.now() - message.createdTimestamp}` + " ms`");
 	}
 }
