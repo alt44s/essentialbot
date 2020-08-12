@@ -32,10 +32,14 @@ module.exports = {
                 console.log(err);
                 return;
             }
-            message.channel.send(`\`\`\`` + data + `\`\`\``);
-        })
-                .catch ((error) => {
-                    message.channel.send("Couldn't send that message. May have been because of the character limit. Try lowering the amount of characters you type in.")
-                });
+            whatever();
+		async function whatever() {
+			try {
+            await message.channel.send(`\`\`\`` + data + `\`\`\``)
+        } catch (err) {
+            await message.channel.send("Couldn't send that message. May have been because of the character limit. Try lowering the amount of characters you type in.")
+        }
+    }
+        });
 	}
 }
