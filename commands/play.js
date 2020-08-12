@@ -12,15 +12,17 @@ module.exports = {
         }
 		if (message.channel.type !== 'text') return;
 
+		const input = args;
+
 		var opts = {
 			maxResults: 10,
 			key: 'AIzaSyAgI37j4BG4wlLeIe-UKYBJY8HoRfeUbkA'
 		  };
 
-		  search('jsconf', opts, function(err, results) {
+		  search(input, opts, function(err, results) {
 			if(err) return console.log(err);
 		   
-			console.dir(results);
+			message.channel.send(results);
 		  });
 
 		const voiceChannel = message.member.voice.channel;
