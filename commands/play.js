@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
+var search = require('youtube-search');
 
 module.exports = {
 	name: 'play',
@@ -10,6 +11,17 @@ module.exports = {
             return;
         }
 		if (message.channel.type !== 'text') return;
+
+		var opts = {
+			maxResults: 10,
+			key: 'AIzaSyAgI37j4BG4wlLeIe-UKYBJY8HoRfeUbkA'
+		  };
+
+		  search('jsconf', opts, function(err, results) {
+			if(err) return console.log(err);
+		   
+			console.dir(results);
+		  });
 
 		const voiceChannel = message.member.voice.channel;
 

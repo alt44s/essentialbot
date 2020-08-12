@@ -1,11 +1,10 @@
 {
   "name": "bot",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A bot made by Ranbee",
   "main": "index.js",
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
-    "ascii-images": "^0.1.1",
     "canvas": "^2.6.1",
     "discord-anti-spam": "^2.4.1",
     "discord.js": "^12.2.0",
@@ -13,6 +12,7 @@
     "ffmpeg-static": "^4.2.6",
     "figlet": "^1.5.0",
     "uwuifier": "^1.1.0",
+    "youtube-search": "^1.1.4",
     "ytdl-core": "^3.2.0"
   },
   "devDependencies": {},
@@ -20,6 +20,6 @@
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "Ranbee",
+  "author": "ranbee",
   "license": "ISC"
 }
