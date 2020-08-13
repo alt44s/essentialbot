@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
-var search = require('youtube-search');
 
 module.exports = {
 	name: 'play',
