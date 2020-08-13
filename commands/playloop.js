@@ -22,12 +22,13 @@ module.exports = {
 		async function whatever() {
 		{
 			try {
-		voiceChannel.join().then(connection => {
+		await voiceChannel.join().then(connection => {
 			const stream = ytdl(message.content.substr(6), { filter: 'audioonly' });
 			const dispatcher = connection.play(stream);
 		})
 		} catch (err) {
-			message.channel.send("Couldn't play the audio.")
+			await message.channel.send("Couldn't play the audio.")
+			console.log(err);
 		}
 		}
 	}
