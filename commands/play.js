@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
-const config = require('/mnt/9836029236027214/bot1/config.json')
+const config = require('/mnt/9836029236027214/bot1/config.json');
 var search = require('youtube-search');
 
 module.exports = {
