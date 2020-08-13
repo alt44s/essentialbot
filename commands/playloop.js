@@ -18,11 +18,18 @@ module.exports = {
 		}
 
 		for (var i=0;i<99;i++)
+		whatever();
+		async function whatever() {
 		{
+			try {
 		voiceChannel.join().then(connection => {
 			const stream = ytdl(message.content.substr(6), { filter: 'audioonly' });
 			const dispatcher = connection.play(stream);
 		})
+		} catch (err) {
+			message.channel.send("Couldn't play the audio.")
+		}
+		}
 	}
 	}
-};
+	}
