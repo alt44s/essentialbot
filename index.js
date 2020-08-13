@@ -4,6 +4,9 @@ const Client = new Discord.Client();
 Client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 const AntiSpam = require('discord-anti-spam');
+const { CommandoClient } = require('discord.js-commando');
+const { Structures } = require('discord.js');
+const path = require('path');
 const antiSpam = new AntiSpam({
     warnThreshold: 3, // Amount of messages sent in a row that will cause a warning.
     kickThreshold: 7, // Amount of messages sent in a row that will cause a ban.
@@ -30,6 +33,34 @@ for (const file of commandFiles) {
 
 const { Permissions } = require('discord.js');
 
+Structures.extend('Guild', Guild => {
+	class MusicGuild extends Guild {
+	  constructor(client, data) {
+		super(client, data);
+		this.musicData = {
+		  queue: [],
+		  isPlaying: false,
+		  volume: 1,
+		  songDispatcher: null
+		};
+	  }
+	}
+	return MusicGuild;
+  });
+  const client = new CommandoClient({
+	commandPrefix: prefix,
+	owner: '472744991241011201',
+	unknownCommandResponse: false
+  });
+  
+  client.registry
+	.registerDefaultTypes()
+	.registerGroups([
+	  ['music', 'Music Command Group']
+	])
+	.registerDefaultGroups()
+	.registerDefaultCommands()
+	.registerCommandsIn(path.join(__dirname, 'commands'));
 
 Client.on('ready', ()=>{
 console.log("Ready to go");
