@@ -21,8 +21,6 @@ module.exports = {
 
 		  search(input, opts, function(err, results) {
 			if(err) return console.log(err);
-		   
-			message.channel.send(results);
 		  });
 
 		const voiceChannel = message.member.voice.channel;
@@ -32,7 +30,7 @@ module.exports = {
 		}
 
 		voiceChannel.join().then(connection => {
-			const stream = ytdl(message.content.substr(6), { filter: 'audioonly' });
+			const stream = ytdl(results, { filter: 'audioonly' });
 			const dispatcher = connection.play(stream);
 
 			dispatcher.on('finish', () => voiceChannel.leave());
