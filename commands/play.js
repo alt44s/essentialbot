@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
-const config = require('/mnt/9836029236027214/bot1/config.json');
 var search = require('youtube-search');
 
 module.exports = {
@@ -24,8 +23,8 @@ module.exports = {
 		if (!message.content.includes(regex)) {
 		var opts = {
 			maxResults: 10,
-			key: config.YOUTUBE_API,
-			type: video
+			key: "AIzaSyAgI37j4BG4wlLeIe-UKYBJY8HoRfeUbkA",
+			type: 'video'
 		  };
 
 		   const results = search(args, opts);
