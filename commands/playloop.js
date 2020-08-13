@@ -21,7 +21,7 @@ module.exports = {
 			const stream = ytdl(message.content.substr(6), { filter: 'audioonly' });
 			const dispatcher = connection.play(stream);
 
-			dispatcher.on('finish', () => dispatcher());
+			dispatcher.on('finish', () => stream());
 		})
 	}
 };
