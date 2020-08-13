@@ -15,7 +15,7 @@ module.exports = {
 		const input = args;
 
 		var opts = {
-			maxResults: 10,
+			maxResults: 1,
 			key: 'AIzaSyAgI37j4BG4wlLeIe-UKYBJY8HoRfeUbkA'
 		  };
 
