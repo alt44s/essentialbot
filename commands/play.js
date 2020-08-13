@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
+var search = require('youtube-search');
 
 module.exports = {
 	name: 'play',
@@ -11,8 +12,6 @@ module.exports = {
         }
 		if (message.channel.type !== 'text') return;
 
-		const input = args;
-		
 		const voiceChannel = message.member.voice.channel;
 
 		if (!voiceChannel) {
@@ -20,7 +19,7 @@ module.exports = {
 		}
 
 		voiceChannel.join().then(connection => {
-			const stream = ytdl(args, { filter: 'audioonly' });
+			const stream = ytdl(message.content.substr(6), { filter: 'audioonly' });
 			const dispatcher = connection.play(stream);
 
 			dispatcher.on('finish', () => voiceChannel.leave());
