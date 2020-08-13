@@ -27,6 +27,8 @@ module.exports = {
 						{ name: 'spamdm', value: 'e!spamdm', inline: true },
 						{ name: 'poll', value: 'e!poll [Text]', inline: true },
 						{ name: '8ball', value: 'e!8ball [Optional Text]', inline: true },
+						{ name: 'figlet', value: 'e!figlet [Font] [Text]', inline: true },
+						{ name: 'figletfonts', value: 'e!figletfonts', inline: true },
 					)
 					.addFields(
 						{ name: 'Music Commands', value: 'Used in a voice channel' },
