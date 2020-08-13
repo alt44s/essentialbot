@@ -17,11 +17,12 @@ module.exports = {
 			return message.channel.send('Please join a voice channel first.');
 		}
 
+		for (var i=0;i<99;i++)
+		{
 		voiceChannel.join().then(connection => {
 			const stream = ytdl(message.content.substr(6), { filter: 'audioonly' });
 			const dispatcher = connection.play(stream);
-
-			dispatcher.on('finish', () => connection.play(stream));
 		})
+	}
 	}
 };
