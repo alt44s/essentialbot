@@ -16,6 +16,8 @@ module.exports = {
 
 		const regex = [/https/,/youtube.com/];
 
+		const query = message.content.substr(6);
+
 		if (!voiceChannel) {
 			return message.channel.send('Please join a voice channel first.');
 		}
@@ -27,15 +29,15 @@ module.exports = {
 			type: 'video'
 		  };
 
-		   const results = search(args, opts);
+		   const results = search(query, opts);
 		   console.log(results);
 		}
 
-		voiceChannel.join().then(connection => {
-			const stream = ytdl(message.content.substr(6), { filter: 'audioonly' });
-			const dispatcher = connection.play(stream);
-
-			dispatcher.on('finish', () => voiceChannel.leave());
-		})
+		//voiceChannel.join().then(connection => {
+		//	const stream = ytdl(message.content.substr(6), { filter: 'audioonly' });
+		//	const dispatcher = connection.play(stream);
+//
+//			dispatcher.on('finish', () => voiceChannel.leave());
+//		})
 	}
 };
