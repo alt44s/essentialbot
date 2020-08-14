@@ -14,7 +14,7 @@ module.exports = {
 
 		const voiceChannel = message.member.voice.channel;
 
-		const regex = [/https/,/youtube.com/];
+		//const regex = [/https/,/youtube.com/];
 
 		const query = message.content.substr(6);
 
@@ -22,12 +22,12 @@ module.exports = {
 			return message.channel.send('Please join a voice channel first.');
 		}
 
-		if (!message.content.includes(regex)) {
-		var opts = {
-			maxResults: 10,
-			key: "AIzaSyAgI37j4BG4wlLeIe-UKYBJY8HoRfeUbkA",
-			type: 'video'
-		  };
+		//if (!message.content.includes(regex)) {
+		//var opts = {
+		//	maxResults: 10,
+		//	key: "AIzaSyAgI37j4BG4wlLeIe-UKYBJY8HoRfeUbkA",
+		//	type: 'video'
+		  //};
 
 		 //  const results = search(query, opts).catch ((err) => console.log(err));
 
@@ -40,15 +40,15 @@ module.exports = {
 			//	});
 			//	message.channel.send(titles)
 			//	}
-		   }
+		  // }
 
-		   if (message.content.includes(regex)) {
+		   //if (message.content.includes(regex)) {
 		voiceChannel.join().then(connection => {
 			const stream = ytdl(message.content.substr(6), { filter: 'audioonly' });
 			const dispatcher = connection.play(stream);
 
 			dispatcher.on('finish', () => voiceChannel.leave());
 		})
-		}
+		
 	}
 }
