@@ -50,4 +50,3 @@ module.exports = {
 //			dispatcher.on('finish', () => voiceChannel.leave());
 //		})
 	}
-};
