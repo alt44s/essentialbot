@@ -9,9 +9,8 @@ module.exports = {
 		if (!message.guild) {
             message.channel.send('You can\'t execute that command here.')
             return;
-        }
-		if (message.channel.type !== 'text') return;
-
+		}
+		
 		const voiceChannel = message.member.voice.channel;
 
 		//const regex = [/https/,/youtube.com/];
