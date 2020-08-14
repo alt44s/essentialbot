@@ -41,12 +41,14 @@ module.exports = {
 				message.channel.send(titles)
 				}
 		   }
-		}
 
-		//voiceChannel.join().then(connection => {
-		//	const stream = ytdl(message.content.substr(6), { filter: 'audioonly' });
-		//	const dispatcher = connection.play(stream);
-//
-//			dispatcher.on('finish', () => voiceChannel.leave());
-//		})
+		   if (message.content.includes(regex)) {
+		voiceChannel.join().then(connection => {
+			const stream = ytdl(message.content.substr(6), { filter: 'audioonly' });
+			const dispatcher = connection.play(stream);
+
+			dispatcher.on('finish', () => voiceChannel.leave());
+		})
+		}
 	}
+}
