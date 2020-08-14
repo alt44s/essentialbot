@@ -29,17 +29,17 @@ module.exports = {
 			type: 'video'
 		  };
 
-		   const results = search(query, opts).catch ((err) => console.log(err));
+		 //  const results = search(query, opts).catch ((err) => console.log(err));
 
-		   if (results) {
-				let youtuberesults = results.results;
-				let i =0;
-				let titles = youtuberesults.map(result => {
-					i++;
-					return i + ") " + result.title;
-				});
-				message.channel.send(titles)
-				}
+		  // if (results) {
+			//	let youtuberesults = results.results;
+			//	let i =0;
+			//	let titles = youtuberesults.map(result => {
+			//		i++;
+			//		return i + ") " + result.title;
+			//	});
+			//	message.channel.send(titles)
+			//	}
 		   }
 
 		   if (message.content.includes(regex)) {
