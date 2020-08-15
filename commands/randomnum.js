@@ -13,10 +13,12 @@ module.exports = {
 		return Math.floor((Math.random() * number2) + number1);
 		}
 		
-		message.channel.send(getRandomInt);
+		const number = getRandomInt();
 
 		if (isNaN(number)) {
 			message.channel.send('Thats an invalid number')
 		}
+
+		message.channel.send(number);
 	},
 };
