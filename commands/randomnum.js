@@ -4,7 +4,7 @@ const client = new Discord.Client();
 module.exports = {
 	name: 'randomnum',
 	description: 'generates a random number',
-	execute(message) {
+	execute(message, args) {
 
 		var number1 = args[0];
 		var number2 = args[1];
