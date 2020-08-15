@@ -8,17 +8,13 @@ module.exports = {
 
 		var number1 = args[0];
 		var number2 = args[1];
-
-		function getRandomInt(max) {
-			return Math.floor(Math.random() * (number2 - number1 + 1) ) + number1;
-		}
 		
-		const number = getRandomInt();
+		const result = Math.floor(Math.random() * number2) + number1; 
 
-		if (isNaN(number)) {
+		if (isNaN(result)) {
 			message.channel.send('Thats an invalid number')
 		}
 
-		message.channel.send(number);
+		message.channel.send(result);
 	},
 };
