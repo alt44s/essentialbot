@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+Client.commands = new Discord.Collection();
 
 module.exports = {
 	name: 'spamdm',
