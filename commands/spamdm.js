@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-Client.commands = new Discord.Collection();
 
 module.exports = {
 	name: 'spamdm',
@@ -8,7 +7,7 @@ module.exports = {
 	execute(message) {
 		const user = message.mentions.users.first();
 
-		var number = args[0];
+		var number = message.content.substr(6);
 
 		if (number = NaN) {
 			message.channel.send('Invalid number')
