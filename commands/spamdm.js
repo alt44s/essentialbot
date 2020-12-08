@@ -3,84 +3,20 @@ const client = new Discord.Client();
 
 module.exports = {
 	name: 'spamdm',
-	description: 'spams your dms 10 times',
+	description: 'spams your dms a number of times',
 	execute(message) {
 		const user = message.mentions.users.first();
 
-		for (var i=0;i<10;i++)
+		var number = args[0];
+
+		if (number = NaN) {
+			message.channel.send('Invalid number')
+			return;
+		}
+
+		for (var i=0;i<number;i++)
 		{
-			message.author.send('WIGGLE WIGGLE')
-			message.author.send('WIGGLE WIGGLE')
-			message.author.send('WIGGLE WIGGLE')
-			message.author.send(' WIGGLE WIGGLE')
-			message.author.send('  WIGGLE WIGGLE')
-			message.author.send('   WIGGLE WIGGLE')
-			message.author.send('	WIGGLE WIGGLE')
-			message.author.send('	 WIGGLE WIGGLE')
-			message.author.send('	  WIGGLE WIGGLE')
-			message.author.send('	  WIGGLE WIGGLE')
-			message.author.send('	  WIGGLE WIGGLE')
-			message.author.send('	 WIGGLE WIGGLE')
-			message.author.send('	WIGGLE WIGGLE')
-			message.author.send('   WIGGLE WIGGLE')
-			message.author.send('  WIGGLE WIGGLE')
-			message.author.send(' WIGGLE WIGGLE')
-			message.author.send('WIGGLE WIGGLE')
-			message.author.send('WIGGLE WIGGLE')
-			message.author.send('WIGGLE WIGGLE')
-			message.author.send(' WIGGLE WIGGLE')
-			message.author.send('  WIGGLE WIGGLE')
-			message.author.send('   WIGGLE WIGGLE')
-			message.author.send('	WIGGLE WIGGLE')
-			message.author.send('	 WIGGLE WIGGLE')
-			message.author.send('	  WIGGLE WIGGLE')
-			message.author.send('	  WIGGLE WIGGLE')
-			message.author.send('	  WIGGLE WIGGLE')
-			message.author.send('	 WIGGLE WIGGLE')
-			message.author.send('	WIGGLE WIGGLE')
-			message.author.send('   WIGGLE WIGGLE')
-			message.author.send('  WIGGLE WIGGLE')
-			message.author.send(' WIGGLE WIGGLE')
-			message.author.send('WIGGLE WIGGLE')
-			message.author.send('WIGGLE WIGGLE')
-			message.author.send('WIGGLE WIGGLE')
-			message.author.send(' WIGGLE WIGGLE')
-			message.author.send('  WIGGLE WIGGLE')
-			message.author.send('   WIGGLE WIGGLE')
-			message.author.send('	WIGGLE WIGGLE')
-			message.author.send('	 WIGGLE WIGGLE')
-			message.author.send('	  WIGGLE WIGGLE')
-			message.author.send('	  WIGGLE WIGGLE')
-			message.author.send('	  WIGGLE WIGGLE')
-			message.author.send('	 WIGGLE WIGGLE')
-			message.author.send('	WIGGLE WIGGLE')
-			message.author.send('   WIGGLE WIGGLE')
-			message.author.send('  WIGGLE WIGGLE')
-			message.author.send(' WIGGLE WIGGLE')
-			message.author.send('WIGGLE WIGGLE')
-			message.author.send('WIGGLE WIGGLE')
-			message.author.send('WIGGLE WIGGLE')
-			message.author.send('WIGGLE WIGGLE')
-			message.author.send(' WIGGLE WIGGLE')
-			message.author.send('  WIGGLE WIGGLE')
-			message.author.send('   WIGGLE WIGGLE')
-			message.author.send('	WIGGLE WIGGLE')
-			message.author.send('	 WIGGLE WIGGLE')
-			message.author.send('	  WIGGLE WIGGLE')
-			message.author.send('	  WIGGLE WIGGLE')
-			message.author.send('	  WIGGLE WIGGLE')
-			message.author.send('	 WIGGLE WIGGLE')
-			message.author.send('	WIGGLE WIGGLE')
-			message.author.send('   WIGGLE WIGGLE')
-			message.author.send('  WIGGLE WIGGLE')
-			message.author.send(' WIGGLE WIGGLE')
-			message.author.send('WIGGLE WIGGLE')
-			message.author.send('WIGGLE WIGGLE')
-			message.author.send('WIGGLE WIGGLE')
-			message.author.send(' WIGGLE WIGGLE')
-			message.author.send('  WIGGLE WIGGLE')
-			message.author.send('   WIGGLE WIGGLE')
-			message.author.send(' WIGGLE WIGGLE')
+			message.author.send('SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM')
 		}
 	},
 };
