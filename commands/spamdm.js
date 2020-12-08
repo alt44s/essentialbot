@@ -5,16 +5,7 @@ module.exports = {
 	name: 'spamdm',
 	description: 'spams your dms a number of times',
 	execute(message) {
-		const user = message.mentions.users.first();
-
-		var number = message.content.substr(6);
-
-		if (number = NaN) {
-			message.channel.send('Invalid number')
-			return;
-		}
-
-		for (var i=0;i<number;i++)
+		for (var i=0;i<10;i++)
 		{
 			message.author.send('SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM')
 		}
