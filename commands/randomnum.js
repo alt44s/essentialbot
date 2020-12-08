@@ -3,17 +3,17 @@ const client = new Discord.Client();
 
 module.exports = {
 	name: 'randomnum',
-	description: 'random number',
-	execute(message, args) {
-
-		var number1 = args[0];
+	description: 'generates a random number',
+	execute(message) {
+		function getRandomInt(max) {
+		return Math.floor(Math.random() * Math.floor(max));
+		}
 		
-		const result = Math.floor(Math.random() * 0) + number1; 
+		var number = message.content.substr(11)
+		message.channel.send(getRandomInt(number))
 
-		if (isNaN(result)) {
+		if (isNaN(number)) {
 			message.channel.send('Thats an invalid number')
 		}
-
-		message.channel.send(result);
 	},
 };
