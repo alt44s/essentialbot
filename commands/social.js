@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 
 module.exports = {
-	name: 'help',
-	description: 'List all of my commands or info about a specific command.',
+	name: 'social',
+	description: 'social media',
 	execute(message, args) {
 		whatever();
 		async function whatever() {
