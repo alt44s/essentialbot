@@ -12,7 +12,7 @@ module.exports = {
 					.setTitle('Social Media')
 					.setAuthor('EssentialBot')
 					.addFields(
-						{ name: 'YouTube', value: 'https://www.youtube.com/channel/UCOtNbZ7ju825GlSPfOZUTgg?view_as=subscriber' },
+						{ name: 'YouTube', value: 'https://www.youtube.com/channel/UCOtNbZ7ju825GlSPfOZUTgg', inline: true },
 						{ name: 'Twitter', value: 'https://twitter.com/true_ranbee', inline: true },
 						{ name: 'Twitch', value: 'https://twitter.com/true_ranbee', inline: true },
 					)
