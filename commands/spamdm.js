@@ -7,7 +7,7 @@ module.exports = {
 	execute(message) {
 		for (var i=0;i<10;i++)
 		{
-			message.author.send('SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM')
+			message.author.send('SPAM SPAM SPAM SPAM SPAM SPAM SPAM')
 		}
 	},
 };
