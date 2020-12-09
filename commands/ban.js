@@ -26,14 +26,14 @@ module.exports = {
             	message.channel.send(`Successfully banned ${user.tag}`);
           	})
           	.catch(err => {
-            	message.channel.send('I was unable to ban the member');
+            	message.channel.send('I was unable to ban that member');
             	console.error(err);
           	});
       	} else {
-      	  message.channel.send("That user isn't in this server.");
+      	  message.channel.send("That user isn't on this server.");
       	}
     	} else {
-    	  message.channel.send("You didn't mention the user to ban.");
+    	  message.channel.send("You didn't mention a user to ban.");
     	}
 	} else if (!member.hasPermission('BAN_MEMBERS')) 
 	{
