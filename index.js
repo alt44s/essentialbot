@@ -46,9 +46,9 @@ Client.on('message', message =>{
 	antiSpam.message(message); 
 
 	const guild = message.guild;
-	//const member = message.member.user.tag;
+	const member = message.member.user.tag;
 
-	//console.log(`Message ` + message.content + ` was sent to ${guild} by ${member}`);
+	console.log(`Message ` + message.content + ` was sent to ${guild} by ${member}`); //shit
 
 	if (!message.content.startsWith("e!") || message.author.bot) return;
 
