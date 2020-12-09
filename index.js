@@ -32,7 +32,7 @@ const { Permissions } = require('discord.js');
 
 
 Client.on('ready', ()=>{
-	client.guilds.cache.forEach(guild => {
+	Client.guilds.cache.forEach(guild => {
 		console.log(`${guild.name} | ${guild.id}`);
 	  })
 	  console.log(`Ready to go`);
