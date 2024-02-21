@@ -1,3 +1,1 @@
 # essentialbot
-# epic bot
-my wife left me and i worry whe she will come back. It has been 20 years since our argument and i still cant stop thinking about it every day. The sole fact that she took the kids is absolutely world-ending for me. I wish I was dead so I didnt think about this so much. Since that moment I've been using reddit to look at big chungus and playing minecraft. Keanu Reeves saved my life, and I consider fortnite to be totally cringe. I still cry everyday even around my pillows with anime girls on them shipped from china. I just dont know where I went wrong and maybe this couldve been avoided somehow by just using 9gag.
